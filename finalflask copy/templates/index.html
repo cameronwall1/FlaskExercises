@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "/static/style.css">
+</head>
+<body>
+
+    <div class = "displaytime">
+            <h1 id = "datetime"></h1>
+        <script>
+            var getTimeElement = document.getElementById("datetime")
+            var currentdate = new Date(); 
+
+            var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            var dayName = days[currentdate.getDay()];
+            var months = ['January', 'Februrary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+            var monthName = months[currentdate.getMonth()];
+            
+            var datetime = "Current Date: " + dayName + ", " 
+                    + monthName + " "
+                    + currentdate.getDate() + " " 
+                    + currentdate.getFullYear() + " "  
+                    + (currentdate.toLocaleTimeString('en-US'));
+
+            getTimeElement.innerHTML = datetime; 
+        </script>
+    </section>
+
+</body>
+</html>
